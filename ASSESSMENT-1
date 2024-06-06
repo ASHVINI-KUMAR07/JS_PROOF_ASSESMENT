@@ -1,0 +1,42 @@
+// Create a variable to hold your NFTs
+const nfts = [];
+
+// This function will take in some values as parameters, create an
+// NFT object using the parameters passed to it for its metadata,
+// and store it in the variable above.
+function mintNFT(Name, Year, Branch, Institute) {
+    const nft = {
+        Name: Name,
+        Year: Year,
+        Branch: Branch,
+        Institute: Institute,
+    };
+    nfts.push(nft);
+}
+
+// Create a "loop" that will go through an "array" of NFTs
+// and print their metadata with console.log()
+function listNFTs() {
+    for (let i = 0; i < nfts.length; i++) {
+        console.log("Name-> " + nfts[i].Name);
+        console.log("Year-> " + nfts[i].Year);
+        console.log("Branch-> " + nfts[i].Branch);
+        console.log("Institute-> " + nfts[i].Institute);
+        console.log('==============================================');
+    }
+}
+
+// Print the total number of NFTs we have minted to the console
+function getTotalSupply() {
+    console.log("Total number of NFTs minted: " + nfts.length);
+}
+
+// Call your functions below this line
+mintNFT("ASHVINI KUMAR", "4th Year", "Computer Science & Engineering", "University Institute of Engineering");
+mintNFT("AJIT", "5th Year", "BA.LLB", "University Institute of Law & Legal Studies");
+mintNFT("ASHU", "1st Year", "CS-A.I.T", "University Institute of computing");
+mintNFT("ARJUN", "2nd Year", "Hotel Management", "University Institute of Management");
+mintNFT("MUDRA", "3rd Year", "Mechanical", "University Institute of Engineering");
+
+listNFTs();
+getTotalSupply();
